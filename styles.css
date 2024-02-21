@@ -1,0 +1,28 @@
+#puzzle {
+  width: 469px;
+  height: 469px;
+}
+
+#puzzle .odd-section {
+  background-color: lightgray;
+}
+
+#puzzle input{
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border-spacing: 0;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #000;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.square{
+  background-color: yellowgreen;
+}
+
