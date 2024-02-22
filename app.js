@@ -47,29 +47,28 @@ const solve = async () => {
   const data = submission.join("");
   console.log("data", data);
 
-  const options = {
-    method: "POST",
-    url: "https://solve-sudoku.p.rapidapi.com/",
-    headers: {
-      "content-type": process.env.CONTENT_TYPE,
-      "X-RapidAPI-Key": process.env.X_RAPIDAPI_KEY,
-      "X-RapidAPI-Host": process.env.X_RAPIDAPI_HOST,
-    },
-    data: {
-      puzzle:
-        "2.............62....1....7...6..8...3...9...7...6..4...4....8....52.............3",
-    },
-  };
+  // const options = {
+  //   method: "POST",
+  //   url: "https://solve-sudoku.p.rapidapi.com/",
+  //   headers: {
+  //     "content-type": process.env.CONTENT_TYPE,
+  //     "X-RapidAPI-Key": process.env.X_RAPIDAPI_KEY,
+  //     "X-RapidAPI-Host": process.env.X_RAPIDAPI_HOST,
+  //   },
+  //   data: {
+  //     puzzle: data,
+  //   },
+  // };
 
-  axios
-    .request(options)
-    .then((response) => {
-      console.log(response.data);
-      populateValues(response.data.solvable, response.data.solution);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+  // axios
+  //   .request(options)
+  //   .then((response) => {
+  //     console.log(response.data);
+  //     populateValues(response.data.solvable, response.data.solution);
+  //   })
+  //   .catch((error) => {
+  //     console.error(error);
+  //   });
 };
 
 solveButton.addEventListener("click", solve);
